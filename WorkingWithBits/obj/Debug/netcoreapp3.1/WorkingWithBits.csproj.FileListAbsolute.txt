@@ -1,0 +1,13 @@
+C:\Users\ABANA\source\repos\WorkingWithBits\WorkingWithBits\bin\Debug\netcoreapp3.1\WorkingWithBits.exe
+C:\Users\ABANA\source\repos\WorkingWithBits\WorkingWithBits\bin\Debug\netcoreapp3.1\WorkingWithBits.deps.json
+C:\Users\ABANA\source\repos\WorkingWithBits\WorkingWithBits\bin\Debug\netcoreapp3.1\WorkingWithBits.runtimeconfig.json
+C:\Users\ABANA\source\repos\WorkingWithBits\WorkingWithBits\bin\Debug\netcoreapp3.1\WorkingWithBits.runtimeconfig.dev.json
+C:\Users\ABANA\source\repos\WorkingWithBits\WorkingWithBits\bin\Debug\netcoreapp3.1\WorkingWithBits.dll
+C:\Users\ABANA\source\repos\WorkingWithBits\WorkingWithBits\bin\Debug\netcoreapp3.1\WorkingWithBits.pdb
+C:\Users\ABANA\source\repos\WorkingWithBits\WorkingWithBits\obj\Debug\netcoreapp3.1\WorkingWithBits.csprojAssemblyReference.cache
+C:\Users\ABANA\source\repos\WorkingWithBits\WorkingWithBits\obj\Debug\netcoreapp3.1\WorkingWithBits.AssemblyInfoInputs.cache
+C:\Users\ABANA\source\repos\WorkingWithBits\WorkingWithBits\obj\Debug\netcoreapp3.1\WorkingWithBits.AssemblyInfo.cs
+C:\Users\ABANA\source\repos\WorkingWithBits\WorkingWithBits\obj\Debug\netcoreapp3.1\WorkingWithBits.csproj.CoreCompileInputs.cache
+C:\Users\ABANA\source\repos\WorkingWithBits\WorkingWithBits\obj\Debug\netcoreapp3.1\WorkingWithBits.dll
+C:\Users\ABANA\source\repos\WorkingWithBits\WorkingWithBits\obj\Debug\netcoreapp3.1\WorkingWithBits.pdb
+C:\Users\ABANA\source\repos\WorkingWithBits\WorkingWithBits\obj\Debug\netcoreapp3.1\WorkingWithBits.genruntimeconfig.cache
