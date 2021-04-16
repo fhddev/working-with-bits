@@ -14,7 +14,7 @@ namespace WorkingWithBits
         }
 
         /*
-         * Pack means get fours bytes and set them side by side
+         * Get 4 bytes and set them side by side
          * to make a 32-bit(4 bytes) int type.
          * */
         public uint Pack(byte[] bytes)
@@ -43,7 +43,7 @@ namespace WorkingWithBits
         }
 
         /*
-         * UnPack means extract 4-bytes from the unit 32-bit
+         * Extract 4-bytes from the unit 32-bit
          * */
         public byte[] Unpack(uint number)
         {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace WorkingWithBits
 {
@@ -7,94 +8,77 @@ namespace WorkingWithBits
         static void Main(string[] args)
         {
             UIntBitOperations op = new UIntBitOperations();
-            Console.WriteLine(op.ToBinary((uint) 10));
+            Console.WriteLine("10 to binary : " + op.ToBinary((uint)10));
+
+            Console.WriteLine();
+            Console.WriteLine("=============================");
+            Console.WriteLine();
+
+            Tokenizer tokenizer = new Tokenizer();
+
+            string tweet = @"Speech balloon @
+             ¡@thibautcourtois
+             en zona mixta!
+            #UCL
+            ";
+            List<string> mentions = tokenizer.ExtractMentions(tweet);
+            List<string> hashtags = tokenizer.ExtractHashtags(tweet);
+
+            if (mentions.Count > 0)
+            {
+                Console.WriteLine("Mentions count : " + mentions.Count);
+                for (int i = 0; i < mentions.Count; i++)
+                    Console.WriteLine("#{0} | {1}", i+1, mentions[i]);
+            }
+            else
+            {
+                Console.WriteLine("No mentions found in the tweet");
+            }
+
+            if (hashtags.Count > 0)
+            {
+                Console.WriteLine("Hashtags count : " + hashtags.Count);
+                for (int i = 0; i < hashtags.Count; i++)
+                    Console.WriteLine("#{0} | {1}", i+1,  hashtags[i]);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("=============================");
+            Console.WriteLine();
+
+            string wordsAndNumsString = "_ali ==    2 5.5";
+
+            List<string> tokens = tokenizer.ExtractSpecialWordsAndNumbers(wordsAndNumsString);
+            if (tokens.Count > 0)
+            {
+                Console.WriteLine("Extracting tokens from -> [" + wordsAndNumsString + "]");
+                for (int i = 0; i < tokens.Count; i++)
+                    Console.WriteLine("#{0} | {1}", i+1, tokens[i]);
+            }
+            else
+            {
+                Console.WriteLine("No tokens found, string is empty or has whitespaces only");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("=============================");
+            Console.WriteLine();
+
+            string stringWithColors = "#f This color is #32a852 #f #23C";
+            List<string> colors = tokenizer.ExtractColors(stringWithColors);
+            if(colors.Count > 0)
+            {
+                Console.WriteLine("Colors count : " + colors.Count);
+                for (int i = 0; i < colors.Count; i++)
+                {
+                    Console.WriteLine(colors[i]);
+                }
+            }
+            else
+            {
+                Console.WriteLine("No colors found");
+            }    
         }
     }
-
-
-
-
-
-
-
-
-
-
-    //class s
-    //{
-    //    static bool isOdd(int value)
-    //    {
-    //        // last bit if 1 means odd
-    //        //
-    //        return (value & 1) == 1;
-    //    }
-
-    //    static uint pack(byte[] bytes)
-    //    {
-    //        uint result = 0;
-    //        byte one = bytes[0];
-    //        byte two = bytes[1];
-    //        byte three = bytes[2];
-    //        byte four = bytes[3];
-
-    //        result = ((uint)four << 24) + ((uint)three << 16) + ((uint)two << 8) + one;
-
-    //        return result;
-    //    }
-
-    //    static byte[] Unpack(uint number)
-    //    {
-    //        byte[] result = new byte[4];
-    //        for (int i = 0; i < result.Length; i++)
-    //        {
-    //            result[i] = (byte)(number >> (8 * i));
-    //        }
-    //        return result;
-    //    }
-
-    //    static string toBinary(uint value)
-    //    {
-    //        string res = string.Empty;
-    //        for (int i = 32; i > 0; i--)
-    //        {
-    //            if ((value & 1) == 1)
-    //            {
-    //                res = 1 + res;
-    //            }
-    //            else
-    //            {
-    //                res = 0 + res;
-    //            }
-    //            value = value >> 1;
-    //        }
-    //        return res;
-    //    }
-
-    //    static void Main(string[] args)
-    //    {
-    //        //uint colors = 0; // RGB: xx010
-
-    //        ////set
-    //        //colors = colors | 3;     //00000000000011
-    //        //colors = colors & (~1U); //11111111111110
-    //        //colors = colors >> 1;    //00000000000001
-
-
-    //        Console.WriteLine("To binary : " + toBinary(8));
-    //        byte[] values = new byte[]
-    //        {
-    //            5,8,201,25
-    //        };
-    //        Console.WriteLine("Pack : " + pack(values));
-
-    //        Console.WriteLine("First byte : " + Unpack(pack(values))[0]);
-    //        Console.WriteLine("Second byte : " + Unpack(pack(values))[1]);
-    //        Console.WriteLine("Three byte : " + Unpack(pack(values))[2]);
-    //        Console.WriteLine("Four byte : " + Unpack(pack(values))[3]);
-
-    //        Console.WriteLine("Is 10 odd : " + isOdd(10));
-    //        Console.WriteLine("Is 7 odd : " + isOdd(7));
-    //    }
-    //}
 
 }
